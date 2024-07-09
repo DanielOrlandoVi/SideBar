@@ -5,13 +5,45 @@ import {
   LightBulbIcon
 } from "@heroicons/react/24/outline";
 
-export const sideBarData= [
-  {
-    title: <span className="text-white">Home</span>,
-    path: "",
-     icon: <HomeIcon className="text-white" />,
+export interface SidebarItemData {
+  title: string;
+  path: string;
+  icon: JSX.Element;
+  userTypes: string[];
+}
 
-   },
+export const sideBarData: SidebarItemData[] = [
+  {
+    title: "Home",
+    path: "/",
+    icon: <HomeIcon className="text-white" />,
+    userTypes: ["Director", "Masajista", "Ciclista", "Administrador"],
+  },
+  {
+    title: "Agregar Ciclista a Escuadra",
+    path: "/agregar-ciclista",
+    icon: <ArchiveBoxIcon className="text-white" />,
+    userTypes: ["Director"],
+  },
+  {
+    title: "Masajear",
+    path: "/masajear",
+    icon: <LightBulbIcon className="text-white" />,
+    userTypes: ["Masajista"],
+  },
+  {
+    title: "Labores",
+    path: "/labores",
+    icon: <LightBulbIcon className="text-white" />,
+    userTypes: ["Ciclista"],
+  },
+  {
+    title: "Eliminar usuarios",
+    path: "/eliminar-usuarios",
+    icon: <LightBulbIcon className="text-white" />,
+    userTypes: ["Administrador"],
+  },
+  
 //   {
 //     title: <span className="text-white">Home Masajista</span>,
 //     path: "/Masajista/Home",

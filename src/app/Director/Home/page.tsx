@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios'; // Importar axios para hacer la llamada a la API
+import React from "react";
 
 interface Director {
     idtipousuario: string;

@@ -28,12 +28,12 @@ export const SidebarItem: React.FC<Props> = ({
 
   return (
     <Link
-      className={`flex justify-center h-[49px] rounded-lg bg-transparent pl-5 ${isActiveItem(path)
-        ? "border-b-[0.5px] bg-red-500"
-        : ""
-        }`}
-      href={path}>
-      <div className="flex justify-start w-full items-center gap-4 ">
+      className={`flex justify-center h-[49px] rounded-lg bg-transparent pl-5 ${
+        isActiveItem(path) ? "border-b-[0.5px] bg-red-500" : ""
+      }`}
+      href={path}
+    >
+      <div className="flex justify-start w-full items-center gap-4">
         <div className={`w-5 h-5 ${isActiveItem(path) ? "text-medium-blue font-bold" : "text-dark-blue"}`}>
           {icon}
         </div>

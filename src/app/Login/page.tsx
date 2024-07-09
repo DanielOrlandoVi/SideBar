@@ -24,6 +24,9 @@ const Login = () => {
       // Manejar la respuesta del servicio de login
       console.log('Respuesta de inicio de sesión:', response);
 
+      // Guardar el tipo de usuario en localStorage para ser usado en sideBar
+      localStorage.setItem('userType', response);
+
       switch (response) {
         case 'Director':
           router.push('/Director/Home');
